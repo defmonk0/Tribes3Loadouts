@@ -70,7 +70,7 @@ Numpad5:: {
 	SelectLoadout(() =>
 		ClickRole(3)
 		ClickWeapon(1, 1)
-		ClickWeapon(2, 1)
+		ClickWeapon(2, 3)
 		ClickWeapon(3, 2)
 		ClickBelt(1)
 		ClickPack(1)
@@ -95,7 +95,7 @@ Numpad7:: {
 		ClickRole(5)
 		ClickWeapon(1, 1)
 		ClickWeapon(2, 2)
-		ClickWeapon(3, 2)
+		ClickWeapon(3, 1)
 		ClickBelt(2)
 		ClickPack(2)
 	)
