@@ -57,7 +57,7 @@ Numpad4:: {
 		ClickWeapon(2, 3)
 		ClickWeapon(3, 3)
 		ClickBelt(2)
-		ClickPack(1))
+		ClickPack(2))
 }
 
 ; Medium Offense
