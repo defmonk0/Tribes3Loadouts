@@ -4,45 +4,53 @@
 #Include UserConfig.ahk
 #Include includes/CalculateRatio.ahk
 
-SendMode "Event"
-SetMouseDelay 50
+additionalDelay := 1000
+maxPlayers := 16
+loops := 10
 
-maxPlayers := 32
+sixteenNineWidth := resolutionHeight / 9 * 16
+aspectDifference := resolutionWidth - sixteenNineWidth
 
-#HotIf WinActive("TRIBES 3: Rivals")
+leftGapWidth := 172 * rRatio
+playerWidth := 592 * rRatio
+buttonWidth := 70 * rRatio
+elementsWidth := leftGapWidth + playerWidth + playerWidth + (buttonWidth / 2)
+
+defaultGapWidth := 178 * rRatio
+aspectCorrectGapWidth := (aspectDifference / 2 * rRatio) + defaultGapWidth
+
+vertStart := 475 * rRatio
+vertOffset := 75 * rRatio
+
+horStart := 800 * rRatio
+horOffset := elementsWidth + aspectCorrectGapWidth - horStart
 
 swap2() {
 	possibilities := [[1, 1], [2, 1]]
 	order := possibilities[Random(1, 2)]
 
 	for i in order {
-		horIndex := 1
-		horMax := 1
-		horStart := 2010
-		horOffset := 0
+		horIndex := 2
+		horMax := 2
 
 		vertIndex := i
 		vertMax := 2
-		vertStart := 475
-		vertOffset := 75
 
 		ClickSectionHelper(horIndex, vertIndex, horMax, vertMax, horStart, vertStart, horOffset, vertOffset)
+		Sleep additionalDelay
 	}
 
 	order := possibilities[Random(1, 2)]
 
 	for i in order {
 		horIndex := 1
-		horMax := 1
-		horStart := 800
-		horOffset := 0
+		horMax := 2
 
 		vertIndex := i
 		vertMax := 2
-		vertStart := 475
-		vertOffset := 75
 
 		ClickSectionHelper(horIndex, vertIndex, horMax, vertMax, horStart, vertStart, horOffset, vertOffset)
+		Sleep additionalDelay
 	}
 }
 
@@ -52,34 +60,30 @@ swap2_reverse() {
 
 	for i in order {
 		horIndex := 1
-		horMax := 1
-		horStart := 800
-		horOffset := 0
+		horMax := 2
 
 		vertIndex := i
 		vertMax := 2
-		vertStart := 475
-		vertOffset := 75
 
 		ClickSectionHelper(horIndex, vertIndex, horMax, vertMax, horStart, vertStart, horOffset, vertOffset)
+		Sleep additionalDelay
 	}
 
 	order := possibilities[Random(1, 2)]
 
 	for i in order {
-		horIndex := 1
-		horMax := 1
-		horStart := 2010
-		horOffset := 0
+		horIndex := 2
+		horMax := 2
 
 		vertIndex := i
 		vertMax := 2
-		vertStart := 475
-		vertOffset := 75
 
 		ClickSectionHelper(horIndex, vertIndex, horMax, vertMax, horStart, vertStart, horOffset, vertOffset)
+		Sleep additionalDelay
 	}
 }
+
+#HotIf WinActive("TRIBES 3: Rivals")
 
 ^Right:: {
 	hor := 800 * rRatio
@@ -92,13 +96,13 @@ swap2_reverse() {
 }
 
 ^Down:: {
-	loop 10 {
+	loop loops {
 		swap2_reverse()
 	}
 }
 
 ^Up:: {
-	loop 10 {
+	loop loops {
 		swap2()
 	}
 }

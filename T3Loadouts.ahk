@@ -10,8 +10,8 @@ Numpad0:: {
 	SelectLoadout(() =>
 		ClickRole(1)
 		ClickWeapon(1, 1)
-		ClickWeapon(2, 1)
-		ClickWeapon(3, 3)
+		ClickWeapon(2, 2)
+		ClickWeapon(3, 1)
 		ClickBelt(1)
 		ClickPack(1))
 }
@@ -21,8 +21,8 @@ Numpad1:: {
 	SelectLoadout(() =>
 		ClickRole(1)
 		ClickWeapon(1, 1)
-		ClickWeapon(2, 1)
-		ClickWeapon(3, 3)
+		ClickWeapon(2, 2)
+		ClickWeapon(3, 1)
 		ClickBelt(1)
 		ClickPack(2))
 }
@@ -32,10 +32,10 @@ Numpad2:: {
 	SelectLoadout(() =>
 		ClickRole(2)
 		ClickWeapon(1, 1)
-		ClickWeapon(2, 1)
-		ClickWeapon(3, 3)
+		ClickWeapon(2, 2)
+		ClickWeapon(3, 1)
 		ClickBelt(1)
-		ClickPack(2))
+		ClickPack(1))
 }
 
 ; Explosive Chase
@@ -43,17 +43,17 @@ Numpad3:: {
 	SelectLoadout(() =>
 		ClickRole(2)
 		ClickWeapon(1, 1)
-		ClickWeapon(2, 1)
-		ClickWeapon(3, 3)
+		ClickWeapon(2, 2)
+		ClickWeapon(3, 1)
 		ClickBelt(2)
-		ClickPack(2))
+		ClickPack(1))
 }
 
 ; Medium Defense
 Numpad4:: {
 	SelectLoadout(() =>
 		ClickRole(4)
-		ClickWeapon(1, 1)
+		ClickWeapon(1, 2)
 		ClickWeapon(2, 3)
 		ClickWeapon(3, 3)
 		ClickBelt(2)
@@ -64,7 +64,7 @@ Numpad4:: {
 Numpad5:: {
 	SelectLoadout(() =>
 		ClickRole(3)
-		ClickWeapon(1, 1)
+		ClickWeapon(1, 2)
 		ClickWeapon(2, 3)
 		ClickWeapon(3, 3)
 		ClickBelt(2)
@@ -75,7 +75,7 @@ Numpad5:: {
 Numpad6:: {
 	SelectLoadout(() =>
 		ClickRole(3)
-		ClickWeapon(1, 1)
+		ClickWeapon(1, 2)
 		ClickWeapon(2, 3)
 		ClickWeapon(3, 3)
 		ClickBelt(2)
