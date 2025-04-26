@@ -1,5 +1,5 @@
 #Requires AutoHotkey v2.0
 
-resolutionWidth := 3440
-resolutionHeight := 1440
+resolutionWidth := SysGet(0)
+resolutionHeight := SysGet(1)
 clickDelayMS := 75
