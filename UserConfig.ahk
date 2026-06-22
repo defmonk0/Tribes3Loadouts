@@ -2,4 +2,4 @@
 
 resolutionWidth := SysGet(0)
 resolutionHeight := SysGet(1)
-clickDelayMS := 75
+clickDelayMS := 40
